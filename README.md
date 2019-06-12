@@ -13,9 +13,16 @@
 </ol>
 <p>Because of the way the SuperScripteroni.ps1 script works, each deployment script will need to perform the nessesary checks to see if the application that is to be deployed already exists to prevent duplicate installs. See <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/ChromeInstall.ps1">ChromeInstall.ps1</a> for an example.</p>
 <h2>How do I set up the Group Policy for Super Scripteroni?</h2>
+<h3>Adding Super Scripteroni Base Script and Policies to a new GPO.</h3>
+<ol>
+  
+</ol>
+<h3>Adding a deployment to Super Scripteroni.</h3>
 <ol>
   <li>In a GPO of your choice, under Computer Configuration / Preferences / Windows Settings / Files, copy and paste the contents of <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/ScriptCopy.xml">ScriptCopy.xml</a> into the Group Policy Management Editor.</li>
   <li>After pasted, edit the item to point where you want your SuperScripteroni instance to be installed.</li>
   <li>Repeat steps 1 and 2 using this XML (<a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/StandardDeploymentGPO.xml">StandartDeploymentGPO.xml</a>) and then edit the folder to the desired package to be deployed.</li>
   <li>Adding an deployment, removing a deployment, targeting a deployment.</li>
 </ol>
+<h3>Removing a deployment from Super Scripteroni.</h3>
+<h3>Targeting a deployment from Super Scripteroni.</h3>
