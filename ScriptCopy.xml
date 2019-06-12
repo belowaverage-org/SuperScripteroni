@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File clsid="{50BE44C8-567A-4ed1-B1D0-9234FE1F38AF}" name="SuperScripteroni.ps1" status="SuperScripteroni.ps1" image="1" changed="2019-06-09 13:53:05" uid="{66FC911E-BD27-4AB5-A76B-F10C0B28ABDB}" bypassErrors="1">
+   <Properties action="R" fromPath="\\share\Software\SuperScripteroni.ps1" targetPath="C:\BELOWAVERAGE\SOFTWARE\SuperScripteroni.ps1" readOnly="0" archive="1" hidden="0" suppress="0" />
+   <Filters>
+      <FilterRunOnce hidden="1" not="0" bool="AND" id="{1F7A522E-207A-4115-A838-E24E997150F4}" />
+   </Filters>
+</File>
