@@ -11,3 +11,8 @@
   <li>SuperScripteroni.ps1 runs each *.ps1 file found in the directories they are found in. (<a href="https://en.wikipedia.org/wiki/Working_directory">Working Directory</a>)</li>
   <li>SuperScripteroni.ps1 writes the PowerShell output to an event in the Applications event log.</li>
 </ol>
+<p>Because of the way the SuperScripteroni.ps1 script works, each deployment script will need to perform the nessesary checks to see if the application that is to be deployed already exists to prevent duplicate installs. See <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/ChromeInstall.ps1">ChromeInstall.ps1</a> for an example.</p>
+<h2>How do I set up the Group Policy for Super Scripteroni?</h2>
+<ol>
+  <li>In a GPO of your choice, under Computer Configuration / Preferences / Windows Settings / Files, copy and paste the contents of <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/ScriptCopy.xml">ScriptCopy.xml</a> into the Group Policy Management Editor.</li>
+</ol>
