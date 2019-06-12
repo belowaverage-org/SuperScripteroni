@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File clsid="{50BE44C8-567A-4ed1-B1D0-9234FE1F38AF}" name="Google Chrome" status="" image="2" changed="2019-06-09 14:00:24" uid="{D3329A78-34C2-4976-80A0-E321805EA1ED}" desc="" bypassErrors="1">
+   <Properties action="U" fromPath="\\share\Software\Deploy\Google Chrome\*" targetPath="C:\BELOWAVERAGE\SOFTWARE\Google Chrome\" readOnly="0" archive="1" hidden="0" suppress="0" />
+   <Filters>
+      <FilterOrgUnit bool="AND" not="0" name="OU=Computers,OU=BA_Computers,DC=ad,DC=belowaverage,DC=org" userContext="0" directMember="0" />
+   </Filters>
+</File>
