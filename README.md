@@ -16,5 +16,6 @@
 <ol>
   <li>In a GPO of your choice, under Computer Configuration / Preferences / Windows Settings / Files, copy and paste the contents of <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/ScriptCopy.xml">ScriptCopy.xml</a> into the Group Policy Management Editor.</li>
   <li>After pasted, edit the item to point where you want your SuperScripteroni instance to be installed.</li>
-  <li></li>
+  <li>Repeat steps 1 and 2 using this XML (<a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/StandardDeploymentGPO.xml">StandartDeploymentGPO.xml</a>) and then edit the folder to the desired package to be deployed.</li>
+  <li>Adding an deployment, removing a deployment, targeting a deployment.</li>
 </ol>
