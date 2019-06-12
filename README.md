@@ -15,4 +15,6 @@
 <h2>How do I set up the Group Policy for Super Scripteroni?</h2>
 <ol>
   <li>In a GPO of your choice, under Computer Configuration / Preferences / Windows Settings / Files, copy and paste the contents of <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/ScriptCopy.xml">ScriptCopy.xml</a> into the Group Policy Management Editor.</li>
+  <li>After pasted, edit the item to point where you want your SuperScripteroni instance to be installed.</li>
+  <li></li>
 </ol>
