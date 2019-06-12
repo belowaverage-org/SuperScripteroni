@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Folder clsid="{07DA02F5-F9CD-4397-A550-4AE21B6B4BD3}" name="Google Chrome" status="" image="3" changed="2019-06-09 12:42:15" uid="{CBDA3832-2B99-4A24-A552-B524D5EF6AF1}" desc="" bypassErrors="1">
-   <Properties action="D" path="C:\BELOWAVERAGE\SOFTWARE\Google Chrome\" deleteFolder="1" deleteSubFolders="1" deleteFiles="1" deleteReadOnly="1" deleteIgnoreErrors="1" readOnly="0" archive="1" hidden="0" />
+   <Properties action="D" path="C:\BELOWAVERAGE\SOFTWARE\Deploy\Google Chrome\" deleteFolder="1" deleteSubFolders="1" deleteFiles="1" deleteReadOnly="1" deleteIgnoreErrors="1" readOnly="0" archive="1" hidden="0" />
    <Filters>
       <FilterOrgUnit bool="AND" not="1" name="OU=Computers,OU=BA_Computers,DC=ad,DC=belowaverage,DC=org" userContext="0" directMember="0" />
    </Filters>
