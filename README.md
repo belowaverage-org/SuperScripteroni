@@ -24,6 +24,6 @@
   <li>After pasted, edit the item to point to the Deploy folder where your SuperScripteroni instance is located.</li>
 </ol>
 <h3>Removing a deployment from Super Scripteroni.</h3>
-  <p>When removing a deployment from a GPO you must add a folder policy to remove the deployment to prevent the SuperScripteroni script from invoking the deployed script next time GPO is updated. For example:</p>
+  <p>When removing a deployment from a GPO you must remove the files policy for the deployment you are trying to remove and add a folder policy to remove the deployment to prevent the SuperScripteroni script from invoking the deployed script next time GPO is updated. For example:</p>
   <img width="500" src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/deletedeployment.png">
 <h3>Targeting a deployment from Super Scripteroni.</h3>
