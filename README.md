@@ -25,7 +25,7 @@
 <img src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/ss1.png">
 <h3>Adding a deployment to Super Scripteroni.</h3>
 <ol>
-  <li>In the SuperScripteroni GPO, under Computer Configuration / Preferences / Windows Settings / Files, copy and paste the contents of <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/StandardDeploymentGPO.xml">StandartDeploymentGPO.xml</a> into the Group Policy Management Editor.</li>
+  <li>In the SuperScripteroni GPO, under Computer Configuration / Preferences / Windows Settings / Files, copy and paste the contents of <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/StandardDeploymentGPO.xml">StandardDeploymentGPO.xml</a> into the Group Policy Management Editor.</li>
   <li>After pasted, edit the file item to copy the contents of a deployment from a server to the client computer under the Deploy folder where your SuperScripteroni instance is located.</li>
 </ol>
 <img src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/gc.png">
@@ -34,6 +34,8 @@
   <p>When removing a deployment from a GPO you must remove the files policy for the deployment you are trying to remove and add a folder policy to remove the deployment to prevent the SuperScripteroni script from invoking the deployed script next time GPO is updated. For example:</p>
   <img width="500" src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/deletedeployment.png">
 <h3>Targeting a deployment from Super Scripteroni.</h3>
+<p>Targeting a deployment from Super Scripteroni requires two additional items to be in place (2 file items and 1 folder item). The <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/TargetedDeploymentFilesGPO1.xml">first file item</a> will be set up the same as the items described in <a href="https://github.com/belowaverage-org/SuperScripteroni#adding-a-deployment-to-super-scripteroni">Adding a deployment to Super Scripteroni.</a> The <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/TargetedDeploymentFilesGPO2.xml">second file item</a> will be a copy of the first item but set up in "Update" mode with "Apply once" disabled. The third <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/TargetedDeploymentFoldersGPO.xml">item (folder item)</a> will point to the targeted package on the local C: drive with the action set to "Delete" with the item level targeting set opposite to the first two items. For example:</p>
+
 <h3>Securing Super Scripteroni.</h3>
 <p>Super Scripteroni runs as system (unless you edit the scheduled task otherwise); therefore, any scripts that are placed in the Deploy folder will run as system. To prevent normal users from creating their own scripts and placing them in the Deploy folder an additional policy needs to be enabled under: Computer Configuration / Policies / Windows Settings / Security Settings / File System</p>
 <img src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/gposecurity.png">
