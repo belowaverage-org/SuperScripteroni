@@ -34,3 +34,7 @@
   <p>When removing a deployment from a GPO you must remove the files policy for the deployment you are trying to remove and add a folder policy to remove the deployment to prevent the SuperScripteroni script from invoking the deployed script next time GPO is updated. For example:</p>
   <img width="500" src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/deletedeployment.png">
 <h3>Targeting a deployment from Super Scripteroni.</h3>
+<h3>Securing Super Scripteroni.</h3>
+<p>Super Scripteroni runs as system (unless you edit the scheduled task otherwise); therefore, any scripts that are placed in the Deploy folder will run as system. To prevent normal users from creating their own scripts and placing them in the Deploy folder an additional policy needs to be enabled under: Computer Configuration / Policies / Windows Settings / Security Settings / File System</p>
+<img src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/gposecurity.png">
+<p>Since both the scheduled task for Super Scripteroni and the GPO Client service run as system, the GPO needs to allow full control to system (already set by default when adding this folder) and deny normal users access to the folder (remove from the list).</p>
