@@ -35,7 +35,14 @@
   <img width="500" src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/deletedeployment.png">
 <h3>Targeting a deployment from Super Scripteroni.</h3>
 <p>Targeting a deployment from Super Scripteroni requires two additional items to be in place (2 file items and 1 folder item). The <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/TargetedDeploymentFilesGPO1.xml">first file item</a> will be set up the same as the items described in <a href="https://github.com/belowaverage-org/SuperScripteroni#adding-a-deployment-to-super-scripteroni">Adding a deployment to Super Scripteroni.</a> The <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/TargetedDeploymentFilesGPO2.xml">second file item</a> will be a copy of the first item but set up in "Update" mode with "Apply once" disabled. The third <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/TargetedDeploymentFoldersGPO.xml">item (folder item)</a> will point to the targeted package on the local C: drive with the action set to "Delete" with the item level targeting set opposite to the first two items. For example:</p>
-
+<h4>File Item 1</h4>
+<img src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/targeting1.png">
+<h4>File Item 2</h4>
+<img src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/targeting2.png">
+<h4>Folder Item</h4>
+<img src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/targeting3.png">
+<img src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/targeting4.png">
+<p>When targeting, the reason there needs to be two file items and 1 folder item set up the way they are is to allow computers to move in and out of the targeting scope and update their deployments accordingly. The first file item initially adds and allows for updates of a deployment, file item 2 allows a computer object to re-obtain a deployment if it were to be deleted by the folder item GPO, and the folder item inverts the targeting to remove a deployment if it falls out of the targeting scope defined in the first two file items.</p>
 <h3>Securing Super Scripteroni.</h3>
 <p>Super Scripteroni runs as system (unless you edit the scheduled task otherwise); therefore, any scripts that are placed in the Deploy folder will run as system. To prevent normal users from creating their own scripts and placing them in the Deploy folder an additional policy needs to be enabled under: Computer Configuration / Policies / Windows Settings / Security Settings / File System</p>
 <img src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/gposecurity.png">
