@@ -2,7 +2,7 @@
   <img height="150" src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/SuperScripteroni.png">
 </p>
 <hr>
-<h3>A PowerShell script to deploy software to domain joined computers via GPO. This script is meant to bypass the use of the built in software deployment GPO. Super Scripteroni runs in the background via a scheduled task after Group Policies have applied.</h3>
+<h3>Super Scripteroni is a PowerShell script used to deploy software to domain joined computers via GPO. This script is meant to bypass the use of the built in software deployment GPO (Computer Configuration / Software Settings / Software installation). Super Scripteroni runs in the background via a scheduled task after Group Policies have applied. (Or whenever you configure it to run)</h3>
 <h2>How does Super Scripteroni Work?</h2>
 <h3>Super Scripteroni Folder Tree</h3>
 <img src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/filetree.bmp">
@@ -16,16 +16,20 @@
 </ol>
 <p>Because of the way the SuperScripteroni.ps1 script works, each deployment script will need to perform the nessesary checks to see if the application that is to be deployed already exists to prevent duplicate installs. See <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/ChromeInstall.ps1">ChromeInstall.ps1</a> for an example.</p>
 <h2>How do I set up the Group Policy for Super Scripteroni?</h2>
-<h3>Adding Super Scripteroni Base Script and Policies to a new GPO.</h3>
+<h3>Adding the Super Scripteroni Base Script and Policies to a new GPO.</h3>
 <ol>
   <li>In a GPO of your choice, under Computer Configuration / Preferences / Windows Settings / Files, copy and paste the contents of <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/ScriptCopy.xml">ScriptCopy.xml</a> into the Group Policy Management Editor.</li>
   <li>After pasted, edit the item to point where you want your SuperScripteroni instance to be installed.</li>
 </ol>
+<img src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/ss2.png">
+<img src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/ss1.png">
 <h3>Adding a deployment to Super Scripteroni.</h3>
 <ol>
   <li>In the SuperScripteroni GPO, under Computer Configuration / Preferences / Windows Settings / Files, copy and paste the contents of <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/StandardDeploymentGPO.xml">StandartDeploymentGPO.xml</a> into the Group Policy Management Editor.</li>
-  <li>After pasted, edit the item to point to the Deploy folder where your SuperScripteroni instance is located.</li>
+  <li>After pasted, edit the file item to copy the contents of a deployment from a server to the client computer under the Deploy folder where your SuperScripteroni instance is located.</li>
 </ol>
+<img src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/gc.png">
+<img src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/gc1.png">
 <h3>Removing a deployment from Super Scripteroni.</h3>
   <p>When removing a deployment from a GPO you must remove the files policy for the deployment you are trying to remove and add a folder policy to remove the deployment to prevent the SuperScripteroni script from invoking the deployed script next time GPO is updated. For example:</p>
   <img width="500" src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/deletedeployment.png">
