@@ -16,13 +16,18 @@
 </ol>
 <p>Because of the way the SuperScripteroni.ps1 script works, each deployment script will need to perform the necessary checks to see if the application that is to be deployed already exists to prevent duplicate installs. See <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/ChromeInstall.ps1">ChromeInstall.ps1</a> for an example.</p>
 <h2>How do I set up the Group Policy for Super Scripteroni?</h2>
-<h3>Adding the Super Scripteroni Base Script and Policies to a new GPO.</h3>
+<h3>Adding the Super Scripteroni Base Script to a new GPO.</h3>
 <ol>
   <li>In a GPO of your choice, under Computer Configuration / Preferences / Windows Settings / Files, copy and paste the contents of <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/ScriptCopy.xml">ScriptCopy.xml</a> into the Group Policy Management Editor.</li>
   <li>After pasted, edit the item to point where you want your SuperScripteroni instance to be installed.</li>
 </ol>
 <img src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/ss2.png">
 <img src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/ss1.png">
+<h3>Adding the Super Scripteroni Scheduled Task to the new GPO.</h3>
+
+<p>In the new GPO you just created in the <a href="">first step</a>, under Computer Configuration / Preferences / Control Panel Settings / Scheduled Tasks, copy and paste the contents of <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/ScheduledTaskGPO.xml">ScheduledTaskGPO.xml</a> into the GPO editor, then open the scheduled task, and edit the action to point to where you copied the script in the <a href="">first step</a>.</p>
+
+
 <h3>Adding a deployment to Super Scripteroni.</h3>
 <ol>
   <li>In the SuperScripteroni GPO, under Computer Configuration / Preferences / Windows Settings / Files, copy and paste the contents of <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/StandardDeploymentGPO.xml">StandardDeploymentGPO.xml</a> into the Group Policy Management Editor.</li>
