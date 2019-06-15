@@ -1,7 +1,8 @@
-#Super Scripteroni 1.1 | Dylan Bickerstaff
+#Super Scripteroni 1.2 | Dylan Bickerstaff
 New-EventLog -LogName "Application" -Source "Super Scripteroni"
 Start-Transcript -Path "C:\SuperScripteroni"
-$currentLocation = Get-Location
+$CurrentLocation = (Get-Item $MyInvocation.InvocationName).Directory
+$CurrentLocation | Set-Location
 Write-Host "Searching for Scripts..."
 $Packages = (Get-Item ".\Deploy").GetDirectories()
 foreach($Package in $Packages) {
@@ -10,7 +11,7 @@ foreach($Package in $Packages) {
         $Script.Directory | Set-Location
         Write-Host "Running $Script in $((Get-Item -Path $Script.DirectoryName).Name) directory..."
         &$Script.FullName
-        $currentLocation | Set-Location
+        $CurrentLocation | Set-Location
         Write-Host "Done."
     }
 }
