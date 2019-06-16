@@ -24,10 +24,8 @@
 <img src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/ss2.png">
 <img src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/ss1.png">
 <h3>Adding the Super Scripteroni Scheduled Task to the new GPO.</h3>
-
-<p>In the new GPO you just created in the <a href="">first step</a>, under Computer Configuration / Preferences / Control Panel Settings / Scheduled Tasks, copy and paste the contents of <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/ScheduledTaskGPO.xml">ScheduledTaskGPO.xml</a> into the GPO editor, then open the scheduled task, and edit the action to point to where you copied the script in the <a href="">first step</a>.</p>
-
-
+<p>In the new GPO you just created in the <a href="">first step</a>, under Computer Configuration / Preferences / Control Panel Settings / Scheduled Tasks, copy and paste the contents of <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/ScheduledTaskGPO.xml">ScheduledTaskGPO.xml</a> into a text editor and edit the highlighted section shown in the picture below to point to where the SuperScripteroni.ps1 script is located, then copy the XML and paste into the GPO editor.</p>
+<img src="https://raw.githubusercontent.com/belowaverage-org/SuperScripteroni/master/images/ScheduleEdit.png">
 <h3>Adding a deployment to Super Scripteroni.</h3>
 <ol>
   <li>In the SuperScripteroni GPO, under Computer Configuration / Preferences / Windows Settings / Files, copy and paste the contents of <a href="https://github.com/belowaverage-org/SuperScripteroni/blob/master/StandardDeploymentGPO.xml">StandardDeploymentGPO.xml</a> into the Group Policy Management Editor.</li>
